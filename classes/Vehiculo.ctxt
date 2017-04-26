@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.params=matricula\ combustible\ cliente
+comment0.target=Vehiculo(java.lang.String,\ int,\ Cliente)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ vehiculo\r\n
+comment1.params=matricula\ combustible\ abs\ cliente
+comment1.target=Vehiculo(java.lang.String,\ int,\ boolean,\ Cliente)
+comment2.params=
+comment2.target=java.lang.String\ getMatricula()
+comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment3.params=
+comment3.target=int\ getCombustible()
+comment4.params=
+comment4.target=boolean\ getAbs()
+comment5.params=abs
+comment5.target=void\ setAbs(boolean)
+comment6.params=
+comment6.target=Cliente\ getCliente()
+numComments=7

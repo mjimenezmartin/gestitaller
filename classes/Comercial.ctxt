@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.params=dni\ nombre\ zona\ telefono
+comment0.target=Comercial(java.lang.String,\ java.lang.String,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Comercial\r\n
+comment1.params=
+comment1.target=int\ getZona()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=zona
+comment2.target=void\ setZona(int)
+numComments=3

@@ -1,0 +1,32 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Program Files\Java\jdk1.8.0_101\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+1.8
+-classpath
+F:\Programas\BlueJ\lib\bluejcore.jar;F:\Programas\BlueJ\lib\junit-4.8.2.jar;F:\Programas\BlueJ\lib\userlib\pi4j-core.jar;F:\Programas\BlueJ\lib\userlib\pi4j-device.jar;F:\Programas\BlueJ\lib\userlib\pi4j-gpio-extension.jar;F:\Programas\BlueJ\lib\userlib\pi4j-service.jar;F:\Documents\UNED\POO\Práctica Obligatoria BlueJ\GestiTaller
+-d
+F:\Documents\UNED\POO\Práctica Obligatoria BlueJ\GestiTaller\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+-docletpath
+F:\Programas\BlueJ\lib\bjdoclet.jar
+-doclet
+bluej.doclet.doclets.formats.html.HtmlDoclet
+F:\Documents\UNED\POO\Práctica Obligatoria BlueJ\GestiTaller\Main.java
+<---- end of javadoc command ---->
+Loading source file F:\Documents\UNED\POO\Práctica Obligatoria BlueJ\GestiTaller\Main.java...
+F:\Documents\UNED\POO\Práctica Obligatoria BlueJ\GestiTaller\Main.java:24: error: ';' expected
+            System.out.println(accion)
+                                      ^
+1 error
