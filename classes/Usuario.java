@@ -41,12 +41,26 @@ public class Usuario
         return this.nombre;
     }
     
+    public void setNombre(String nombre){
+        if (nombre != ""){
+            this.nombre = nombre;
+        }
+    }
+    
     public String getDni(){
         return this.dni;
     }
     
+    public void setDni(String dni){
+        if (dni != ""){
+            this.dni = dni;
+        }
+    }
+    
     public void setTelefono(int telefono){
-        this.telefono = telefono;
+        if (telefono != 0){
+            this.telefono = telefono;
+        }
     }
     
     public int getTelefono(){

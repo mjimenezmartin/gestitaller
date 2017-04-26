@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=cliente
-comment0.target=void\ addToList(classes.Cliente)
+comment0.params=
+comment0.target=void\ addToList()
 comment1.params=
 comment1.target=void\ listar()
 numComments=2

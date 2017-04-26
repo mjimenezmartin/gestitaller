@@ -16,11 +16,11 @@ import java.util.*;
  */
 public class Clientes
 {
-  protected static Scanner sc = new Scanner(System.in);
+   protected static Scanner sc = new Scanner(System.in);
    
-
    public static ArrayList<Cliente> lista = new ArrayList<Cliente>();
    public static int numeroCliente = 0;
+   
    
    public static void addToList() {
     System.out.print("Introduzca DNI: ");
@@ -40,5 +40,54 @@ public class Clientes
         for(Cliente cli : lista){
             System.out.println("Cliente número: "+cli.getNumeroCliente()+" "+cli.getNombre()+" "+cli.getDni());
         }
+  }
+  
+  public static Cliente buscar(int id){
+    for (Cliente cliente : Clientes.lista){
+            if (cliente.getNumeroCliente() == id){
+                return cliente;
+            }
+        }
+    return null;
+  }
+  
+  public static void update(){
+      if(lista.size() <= 0){
+          System.out.println("No existen clientes en el sistema");
+      }else{
+          Cliente cliente = null;
+          while (cliente == null){
+              System.out.print("Introduzca numero de cliente (introduzca 0 para volver al menu principal): ");
+              int id = sc.nextInt();
+              if (id == 0){
+                 break;
+              }
+              cliente = buscar(id);
+              if (cliente == null){
+                System.out.println("El numero de cliente introducido no existe");
+              }else{
+                  System.out.print("Introduzca nuevo dni (dejar en blanco para mantener): ");
+                  String dni = sc.next();
+                  cliente.setDni(dni);
+                  System.out.print("Introduzca nuevo nombre (dejar en blanco para mantener): ");
+                  String nombre = sc.next();
+                  cliente.setNombre(nombre);
+                  System.out.print("Introduzca nuevo teléfono (dejar en blanco para mantener): ");
+                  int tlfno = sc.nextInt();
+                  cliente.setTelefono(tlfno);
+                  System.out.println("Cliente actualizado correctamente");
+              }
+          }
+    }
+  }
+  
+  public static Cliente getCliente(int id){
+      Cliente propietario = null;
+        for (Cliente cliente : Clientes.lista){
+            if (cliente.getNumeroCliente() == id){
+                return propietario = cliente;
+            }
+        }
+      return propietario;
   }
 }
