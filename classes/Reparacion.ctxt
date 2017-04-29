@@ -1,6 +1,6 @@
 #BlueJ class context
-comment0.params=vehiculo
-comment0.target=Reparacion(Vehiculo)
+comment0.params=vehiculo\ mecanico
+comment0.target=Reparacion(Vehiculo,\ Mecanico)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Reparacion\r\n
 comment1.params=
 comment1.target=Vehiculo\ getVehiculo()

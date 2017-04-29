@@ -18,9 +18,10 @@ public class Reparacion
     /**
      * Constructor for objects of class Reparacion
      */
-    public Reparacion(Vehiculo vehiculo)
+    public Reparacion(Vehiculo vehiculo, Mecanico mecanico)
     {
         this.vehiculo = vehiculo;
+        this.mecanico = mecanico;
         this.estado = 0;
     }
     

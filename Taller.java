@@ -23,39 +23,73 @@ public class Taller {
             listaClientes.add(cliente);
         }*/
         Mecanicos.addMecanicos();
-       
+       System.out.println("\033[32mBienvenido.");
     while (accion != 0){
 
-        System.out.println("Bienvenido. Indique la acción a realizar: (0 para salir)");
-        System.out.println("  1 - Añadir cliente ");
-        System.out.println("  2 - Modificar cliente ");
-        System.out.println("  3 - Añadir vehiculo ");
-        System.out.println("  4 - Modificar vehicuclo");
-        System.out.println("  5 - Listar vehiculos de cliente");
-        System.out.println("  6 - Añadir vehiculo de servicio publico");
+        System.out.println("Indique que desea gestionar: (0 para salir)");
+        System.out.println(" 1 - Gestionar clientes");
+        System.out.println(" 2 - Gestionar Vehiculos");
+        System.out.println(" 3 - Gestionar Fichas de Reparacion");
+
         accion = sc.nextInt();
-        
+        int submenu = -1;
     switch (accion) {
+        case 1:
+            while (submenu != 0){
+                System.out.println("Indique que gestión desea realizar (0 para salir): ");
+                System.out.println("  1 - Añadir cliente ");
+                System.out.println("  2 - Modificar cliente ");
+                submenu = sc.nextInt();
+                
+                switch(submenu){
+                    case 0:
+                        break;
+                    case 1:
+                        Clientes.addToList();
+                        break;           
+                    case 2:
+                        Clientes.update();
+                        break; 
+                    default:
+                        System.out.println("Esa opción no es válida");
+                        break;
+                }
+                
+            }
+            break;
+        case 2:
+            while (submenu != 0){
+                System.out.println("Indique que gestión desea realizar (0 para salir): ");
+                System.out.println("  1 - Añadir vehiculo ");
+                System.out.println("  2 - Modificar vehicuclo");
+                System.out.println("  3 - Listar vehiculos de cliente ");
+                System.out.println("  4 - Añadir vehiculo de Servicio Público");
+                submenu = sc.nextInt();
+                
+                switch(submenu){
+                    case 0:
+                        break;
+                    case 1:
+                        Vehiculos.addToList(false);
+                        break;
+                    case 2:
+                        Vehiculos.update();
+                        break;
+                    case 3:
+                        Vehiculos.listarVehiculos();
+                        break;        
+                    case 4:
+                        Vehiculos.addToList(true);
+                        break;
+                    default:
+                        System.out.println("Esa opción no es válida");
+                        break;
+                }
+                
+            }
+            break;
         case 0:
             System.out.println("Hasta pronto");
-            break;
-        case 1:
-            Clientes.addToList();
-            break;           
-        case 2:
-            Clientes.update();
-            break; 
-        case 3:
-            Vehiculos.addToList(false);
-            break;
-        case 4:
-            Vehiculos.update();
-            break;
-        case 5:
-            Vehiculos.listarVehiculos();
-            break;
-        case 6:
-            Vehiculos.addToList(true);
             break;
         default:
             System.out.println("Esa opción no es válida");

@@ -10,14 +10,16 @@ package classes;
 public class Mecanico extends Usuario
 {
     int tipo;
-
+    int id;
+    
     /**
      * Constructor for objects of class Mecanico
      */
-    public Mecanico(String dni, String nombre, int tipo, int telefono)
+    public Mecanico(String dni, String nombre, int tipo, int telefono, int id)
     {
         super(dni, nombre, telefono);
         this.tipo = tipo;
+        this.id = id;
     }
 
     /**
@@ -30,7 +32,15 @@ public class Mecanico extends Usuario
         return this.tipo;
     }
     
-	 public void setTipo(){
+     public void setTipo(int tipo){
         this.tipo = tipo;
+    }
+    
+    public int getId(){
+        return this.id;
+    }
+    
+     public void setId(int id){
+        this.id = id;
     }
 }

@@ -42,16 +42,18 @@ public class Vehiculos
                 } 
                 System.out.print("Introduzca numero de puertas: ");
                 int nPuertas = sc.nextInt();
-                Coche vehiculo = new Coche(matricula, combustible, propietario, tieneCalefaccion, nPuertas);
+                Coche vehiculo = new Coche(matricula, combustible, propietario, tieneCalefaccion, nPuertas, servicioPublico);
                 lista.add(vehiculo);
+                Reparaciones.addFicha(vehiculo);
             }
             if( tipoVehiculo == 2 ){
                 System.out.print("Introduzca tipo de carnet (1- A1, 2- A2, 0- A): ");
                 int tipo = sc.nextInt();
-                Moto vehiculo = new Moto(matricula, 1, propietario, tipo);
+                Moto vehiculo = new Moto(matricula, 1, propietario, tipo, servicioPublico);
                 lista.add(vehiculo);
+                Reparaciones.addFicha(vehiculo);
             }
-            listar();
+
         }else{
             System.out.println("El numero de cliente introducido no existe.");
             Clientes.listar();

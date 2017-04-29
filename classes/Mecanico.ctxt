@@ -1,12 +1,14 @@
 #BlueJ class context
-comment0.target=Mecanico
-comment0.text=\n\ Write\ a\ description\ of\ class\ Mecanico\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ Usuariote)\n
-comment1.params=dni\ nombre\ tipo\ telefono
-comment1.target=Mecanico(java.lang.String,\ java.lang.String,\ int,\ int)
-comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Mecanico\n
-comment2.params=
-comment2.target=int\ getTipo()
-comment2.text=\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\n\ \n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \n
+comment0.params=dni\ nombre\ tipo\ telefono\ id
+comment0.target=Mecanico(java.lang.String,\ java.lang.String,\ int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Mecanico\r\n
+comment1.params=
+comment1.target=int\ getTipo()
+comment1.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+comment2.params=tipo
+comment2.target=void\ setTipo(int)
 comment3.params=
-comment3.target=void\ setTipo()
-numComments=4
+comment3.target=int\ getId()
+comment4.params=id
+comment4.target=void\ setId(int)
+numComments=5
