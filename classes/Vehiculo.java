@@ -45,9 +45,15 @@ public class Vehiculo
     {
         return this.matricula;
     }
+    public void setMatricula(String matricula){
+        this.matricula = matricula;
+    }
     public int getCombustible()
     {
         return this.combustible;
+    }
+    public void setCombustible(int combustible){
+        this.combustible = combustible;
     }
     public boolean getAbs()
     {
