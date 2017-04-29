@@ -22,6 +22,7 @@ public class Taller {
             listaUsuarios.add(comercial);
             listaClientes.add(cliente);
         }*/
+        Mecanicos.addMecanicos();
        
     while (accion != 0){
 
@@ -31,6 +32,7 @@ public class Taller {
         System.out.println("  3 - Añadir vehiculo ");
         System.out.println("  4 - Modificar vehicuclo");
         System.out.println("  5 - Listar vehiculos de cliente");
+        System.out.println("  6 - Añadir vehiculo de servicio publico");
         accion = sc.nextInt();
         
     switch (accion) {
@@ -44,13 +46,16 @@ public class Taller {
             Clientes.update();
             break; 
         case 3:
-            Vehiculos.addToList();
+            Vehiculos.addToList(false);
             break;
         case 4:
             Vehiculos.update();
             break;
         case 5:
             Vehiculos.listarVehiculos();
+            break;
+        case 6:
+            Vehiculos.addToList(true);
             break;
         default:
             System.out.println("Esa opción no es válida");

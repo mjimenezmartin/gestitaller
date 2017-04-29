@@ -9,20 +9,24 @@ package classes;
  */
 public class Moto extends Vehiculo
 {
-    int tipo;
+    int tipoCarnet;
     /**
      * Constructor for objects of class Moto
      */
-    public Moto( String matricula, int combustible, Cliente cliente )
+    public Moto( String matricula, int combustible, Cliente cliente, boolean publico )
     {
-       super(matricula, combustible, cliente);
+       super(matricula, combustible, cliente, publico);
     }
-    
+    public Moto( String matricula, int combustible, Cliente cliente, int tipo, boolean publico )
+    {
+       super(matricula, combustible, cliente, publico);
+       this.tipoCarnet = tipo;
+    }
     public void setTipo(int tipo){
-        this.tipo = tipo;
+        this.tipoCarnet = tipo;
     }
     
     public int getTipo(){
-        return this.tipo;
+        return this.tipoCarnet;
     }
 }

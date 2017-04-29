@@ -1,9 +1,11 @@
 #BlueJ class context
-comment0.params=matricula\ combustible\ cliente
-comment0.target=Moto(java.lang.String,\ int,\ Cliente)
+comment0.params=matricula\ combustible\ cliente\ publico
+comment0.target=Moto(java.lang.String,\ int,\ Cliente,\ boolean)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Moto\r\n
-comment1.params=tipo
-comment1.target=void\ setTipo(int)
-comment2.params=
-comment2.target=int\ getTipo()
-numComments=3
+comment1.params=matricula\ combustible\ cliente\ tipo\ publico
+comment1.target=Moto(java.lang.String,\ int,\ Cliente,\ int,\ boolean)
+comment2.params=tipo
+comment2.target=void\ setTipo(int)
+comment3.params=
+comment3.target=int\ getTipo()
+numComments=4

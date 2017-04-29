@@ -16,9 +16,15 @@ public class Coche extends Vehiculo
     /**
      * Constructor for objects of class Coche
      */
-    public Coche( String matricula, int combustible, Cliente cliente )
+    public Coche( String matricula, int combustible, Cliente cliente, boolean publico )
     {
-       super(matricula, combustible, cliente);
+       super(matricula, combustible, cliente, publico);
+    }
+    public Coche( String matricula, int combustible, Cliente cliente, boolean calefaccion, int nPuertas, boolean publico )
+    {
+       super(matricula, combustible, cliente, publico);
+       this.calefaccion = calefaccion;
+       this.nPuertas = nPuertas;
     }
     public boolean getCalefaccion(){
         return this.calefaccion;

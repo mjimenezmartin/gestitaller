@@ -1,5 +1,5 @@
 package classes;
-
+import java.util.*;
 
 /**
  * Write a description of class Reparacion here.
@@ -10,24 +10,23 @@ package classes;
 public class Reparacion
 {
     // instance variables - replace the example below with your own
-    private Cliente cliente;
+    private Vehiculo vehiculo;
     private Mecanico mecanico;
     public int estado;
-    public String datos;
+    public Map<String, Integer> tareas = new HashMap<String, Integer>();
 
     /**
      * Constructor for objects of class Reparacion
      */
-    public Reparacion(Cliente cliente)
+    public Reparacion(Vehiculo vehiculo)
     {
-        this.cliente = cliente;
+        this.vehiculo = vehiculo;
         this.estado = 0;
     }
-
     
-    public Cliente getCliente()
+    public Vehiculo getVehiculo()
     {
-        return this.cliente;
+        return this.vehiculo;
     }
     
     public void setMecanico(Mecanico mecanico){
@@ -46,11 +45,15 @@ public class Reparacion
         return this.estado;
     }
     
-    public void setDatos(String datos){
-        this.datos = datos;
+    public void addTarea(String titulo){
+        tareas.put(titulo, 0);
     }
     
-    public String getDatos(){
-        return this.datos;
+    public Map getTareas(){
+        return this.tareas;
+    }
+    
+    public void updateTarea(String titulo, int estado){
+        tareas.put(titulo, 0);
     }
 }

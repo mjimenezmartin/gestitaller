@@ -1,13 +1,15 @@
 #BlueJ class context
-comment0.params=matricula\ combustible\ cliente
-comment0.target=Coche(java.lang.String,\ int,\ Cliente)
+comment0.params=matricula\ combustible\ cliente\ publico
+comment0.target=Coche(java.lang.String,\ int,\ Cliente,\ boolean)
 comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Coche\r\n
-comment1.params=
-comment1.target=boolean\ getCalefaccion()
+comment1.params=matricula\ combustible\ cliente\ calefaccion\ nPuertas\ publico
+comment1.target=Coche(java.lang.String,\ int,\ Cliente,\ boolean,\ int,\ boolean)
 comment2.params=
-comment2.target=int\ getNPuertas()
-comment3.params=nPuertas
-comment3.target=void\ setNPuertas(int)
-comment4.params=calefaccion
-comment4.target=void\ setCalefaccion(boolean)
-numComments=5
+comment2.target=boolean\ getCalefaccion()
+comment3.params=
+comment3.target=int\ getNPuertas()
+comment4.params=nPuertas
+comment4.target=void\ setNPuertas(int)
+comment5.params=calefaccion
+comment5.target=void\ setCalefaccion(boolean)
+numComments=6

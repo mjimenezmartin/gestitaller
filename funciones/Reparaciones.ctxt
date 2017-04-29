@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=vehiculo\ mecanico
+comment0.target=void\ addFichaReparacion(classes.Vehiculo,\ classes.Mecanico)
+numComments=1

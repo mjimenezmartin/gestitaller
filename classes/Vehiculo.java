@@ -15,24 +15,27 @@ public class Vehiculo
     public boolean abs = false;
     public int capacidadMotor;
     public Cliente cliente;
+    public boolean esPublico = false;
     
 
     /**
      * Constructor for objects of class vehiculo
      */
-    public Vehiculo( String matricula, int combustible, Cliente cliente )
+    public Vehiculo( String matricula, int combustible, Cliente cliente, boolean publico )
     {
         this.matricula = matricula;
         this.combustible = combustible;
         this.cliente = cliente;
+        this.esPublico = publico;
     }
     
-    public Vehiculo( String matricula, int combustible, boolean abs, Cliente cliente )
+    public Vehiculo( String matricula, int combustible, boolean abs, Cliente cliente, boolean publico )
     {
         this.matricula = matricula;
         this.combustible = combustible;
         this.abs = abs;
         this.cliente = cliente;
+        this.esPublico = publico;
     }
     
     /**
@@ -64,5 +67,8 @@ public class Vehiculo
     }
     public Cliente getCliente(){
         return this.cliente;
+    }
+    public boolean getPublico(){
+        return this.esPublico;
     }
 }

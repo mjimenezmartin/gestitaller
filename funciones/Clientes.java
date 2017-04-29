@@ -42,9 +42,9 @@ public class Clientes
         }
   }
   
-  public static Cliente buscar(int id){
+  public static Cliente buscar(String dni){
     for (Cliente cliente : Clientes.lista){
-            if (cliente.getNumeroCliente() == id){
+            if (cliente.getDni().equals(dni)){
                 return cliente;
             }
         }
@@ -58,16 +58,16 @@ public class Clientes
           Cliente cliente = null;
           while (cliente == null){
               System.out.print("Introduzca numero de cliente (introduzca 0 para volver al menu principal): ");
-              int id = sc.nextInt();
-              if (id == 0){
+              String dni = sc.next();
+              if (dni.equals("0")){
                  break;
               }
-              cliente = buscar(id);
+              cliente = buscar(dni);
               if (cliente == null){
                 System.out.println("El numero de cliente introducido no existe");
               }else{
                   System.out.print("Introduzca nuevo dni (dejar en blanco para mantener): ");
-                  String dni = sc.next();
+                  dni = sc.next();
                   cliente.setDni(dni);
                   System.out.print("Introduzca nuevo nombre (dejar en blanco para mantener): ");
                   String nombre = sc.next();
@@ -81,10 +81,10 @@ public class Clientes
     }
   }
   
-  public static Cliente getCliente(int id){
+  public static Cliente getCliente(String dni){
       Cliente propietario = null;
         for (Cliente cliente : Clientes.lista){
-            if (cliente.getNumeroCliente() == id){
+            if (cliente.getDni().equals(dni)){
                 return propietario = cliente;
             }
         }

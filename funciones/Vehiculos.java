@@ -17,22 +17,40 @@ public class Vehiculos
    
    public static ArrayList<Vehiculo> lista = new ArrayList<Vehiculo>();
    
-   public static void addToList() {
+   public static void addToList(boolean servicioPublico) {
        Cliente propietario = null;
        boolean encontrado = false;
     if (Clientes.lista.size() <= 0){
         System.out.println("Debe introducir al menos un cliente en el sistema");
     }else{
         System.out.print("Introduzca Numero de Cliente (Propietario): ");
-        int numeroCliente = sc.nextInt();
-        propietario = Clientes.buscar(numeroCliente);
+        String dni = sc.next();
+        propietario = Clientes.buscar(dni);
         if (propietario != null){
+            System.out.print("Tipo de vehiculo (1 - Tirusmo, 2 - Motocicleta) : ");
+            int tipoVehiculo = sc.nextInt();
             System.out.print("Introduzca matricula: ");
             String matricula = sc.next();
-            System.out.print("Introduzca combustible (1- Gasolina, 2- Diesel, 3- Electrico): ");
-            int combustible = sc.nextInt();
-            Vehiculo vehiculo = new Vehiculo(matricula, combustible, propietario);
-            lista.add(vehiculo);
+            if( tipoVehiculo == 1 ){
+                System.out.print("Introduzca combustible (1- Gasolina, 2- Diesel, 3- Electrico): ");
+                int combustible = sc.nextInt();
+                System.out.print("Tiene calefacción? (Si - No): ");
+                String calefaccion = sc.next().toLowerCase();
+                boolean tieneCalefaccion = false;
+                if (calefaccion.equals("si")){
+                    tieneCalefaccion = true;
+                } 
+                System.out.print("Introduzca numero de puertas: ");
+                int nPuertas = sc.nextInt();
+                Coche vehiculo = new Coche(matricula, combustible, propietario, tieneCalefaccion, nPuertas);
+                lista.add(vehiculo);
+            }
+            if( tipoVehiculo == 2 ){
+                System.out.print("Introduzca tipo de carnet (1- A1, 2- A2, 0- A): ");
+                int tipo = sc.nextInt();
+                Moto vehiculo = new Moto(matricula, 1, propietario, tipo);
+                lista.add(vehiculo);
+            }
             listar();
         }else{
             System.out.println("El numero de cliente introducido no existe.");
@@ -82,7 +100,9 @@ public class Vehiculos
    public static void listar() {
         System.out.println("los vehiculos disponibles son: ");
         for(Vehiculo veh : lista){
-            System.out.println(veh.getMatricula()+" "+veh.getCliente().getNombre());
+            System.out.print("Tipo de vehiculo: "+veh.getClass().getSimpleName());
+            System.out.print(", Matrícula: "+veh.getMatricula());
+            System.out.println(", Porpietario: "+veh.getCliente().getDni());
         }
    }
    
@@ -90,9 +110,9 @@ public class Vehiculos
        ArrayList<Vehiculo> vehiculosCliente = new ArrayList<Vehiculo>();
        Cliente propietario = null;
        System.out.print("introduzca numero de cliente:");
-       int id = sc.nextInt();
+       String dni = sc.next();
        for (Vehiculo veh : lista){
-           if(veh.getCliente().getNumeroCliente() == id){
+           if(veh.getCliente().getDni().equals(dni)){
                vehiculosCliente.add(veh);
            }
        }
@@ -100,11 +120,10 @@ public class Vehiculos
            System.out.println("No existen vehiculos para el cliente indicado");
        }
        else{
-           System.out.println("Los vehiculos del cliente "+id+" son:");
+           System.out.println("Los vehiculos del cliente "+dni+" son:");
            for ( Vehiculo veh : vehiculosCliente){
                System.out.println("Matricula: "+veh.getMatricula());
            }
        }
-   
     }
 }
