@@ -1,6 +1,8 @@
 #BlueJ class context
 comment0.params=vehiculo
 comment0.target=void\ addFicha(classes.Vehiculo)
-comment1.params=reparacion
-comment1.target=void\ listarTareas(classes.Reparacion)
-numComments=2
+comment1.params=
+comment1.target=void\ buscar()
+comment2.params=reparacion
+comment2.target=void\ listarTareas(classes.Reparacion)
+numComments=3

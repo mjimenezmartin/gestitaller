@@ -34,7 +34,7 @@ public class Mecanicos
         System.out.println("los mecanicos disponibles son: ");
         for(Mecanico mec : lista){
             System.out.print("id: "+mec.getId());
-            System.out.println("Nombre: "+mec.getNombre());
+            System.out.println(", Nombre: "+mec.getNombre());
         }
    }
 }

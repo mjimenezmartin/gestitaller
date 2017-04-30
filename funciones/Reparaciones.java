@@ -57,10 +57,26 @@ public class Reparaciones
         
     }
     
+    public static void buscar(){
+        System.out.print("Introduzca matricula: ");
+        String matricula = sc.next();
+        boolean encontrado = false;
+        for (Reparacion reparacion : lista){
+            if (reparacion.getVehiculo().getMatricula().equals(matricula)){
+                encontrado = true;
+                System.out.println("Asignada al mecanico: "+reparacion.getMecanico().getNombre());
+                listarTareas(reparacion);
+            }
+        }
+        if(!encontrado){
+            System.out.println("No existe ficha de reparación asociada a ese vehiculo");
+        }
+    }
+    
     public static void listarTareas(Reparacion reparacion){
         Map<String, Integer> tareas = reparacion.getTareas();
         for (Entry<String, Integer> e: tareas.entrySet()) {
-            System.out.print(e.getKey());
+            System.out.print("\t"+e.getKey());
             System.out.print(" - ");
             switch(e.getValue()){
                 case 0:

@@ -9,21 +9,10 @@ public class Taller {
     
         Scanner sc = new Scanner(System.in);
         int accion = -1;
-
-        /*Usuario usuario = new Usuario("0", "Nombre");
-        ArrayList<Usuario> listaUsuarios = new ArrayList<Usuario>();
-        ArrayList<Cliente> listaClientes = new ArrayList<Cliente>();*/
         
-        /*  for (int i = 0; i <= 2; i++){
-            Mecanico mecanico = new Mecanico("7483389"+i, "mecanico"+i, i, 62544520+i);
-            Comercial comercial = new Comercial("389"+i, "comercialz"+i, i, 4520+i);
-            Cliente cliente = new Cliente ("111"+i, "cliente"+i, i, 111+i);
-            listaUsuarios.add(mecanico);
-            listaUsuarios.add(comercial);
-            listaClientes.add(cliente);
-        }*/
-        Mecanicos.addMecanicos();
-       System.out.println("\033[32mBienvenido.");
+        Mecanicos.addMecanicos(); //Añadiendo mecanicos automaticamente
+        
+       System.out.println("Bienvenido.");
     while (accion != 0){
 
         System.out.println("Indique que desea gestionar: (0 para salir)");
@@ -36,7 +25,7 @@ public class Taller {
     switch (accion) {
         case 1:
             while (submenu != 0){
-                System.out.println("Indique que gestión desea realizar (0 para salir): ");
+                System.out.println("Indique que gestión desea realizar (0 para volver): ");
                 System.out.println("  1 - Añadir cliente ");
                 System.out.println("  2 - Modificar cliente ");
                 submenu = sc.nextInt();
@@ -59,11 +48,12 @@ public class Taller {
             break;
         case 2:
             while (submenu != 0){
-                System.out.println("Indique que gestión desea realizar (0 para salir): ");
+                System.out.println("Indique que gestión desea realizar (0 para volver): ");
                 System.out.println("  1 - Añadir vehiculo ");
-                System.out.println("  2 - Modificar vehicuclo");
-                System.out.println("  3 - Listar vehiculos de cliente ");
-                System.out.println("  4 - Añadir vehiculo de Servicio Público");
+                System.out.println("  2 - Añadir vehiculo de Servicio Público");
+                System.out.println("  3 - Modificar vehicuclo");
+                System.out.println("  4 - Listar vehiculos de cliente");
+                System.out.println("  5 - Buscar vehiculo");
                 submenu = sc.nextInt();
                 
                 switch(submenu){
@@ -73,13 +63,35 @@ public class Taller {
                         Vehiculos.addToList(false);
                         break;
                     case 2:
-                        Vehiculos.update();
+                        Vehiculos.addToList(true);
                         break;
                     case 3:
-                        Vehiculos.listarVehiculos();
+                        Vehiculos.update();
                         break;        
                     case 4:
-                        Vehiculos.addToList(true);
+                        Vehiculos.listarVehiculos();
+                        break;
+                    case 5:
+                        Vehiculos.buscarVehiculo();
+                        break;
+                    default:
+                        System.out.println("Esa opción no es válida");
+                        break;
+                }
+                
+            }
+            break;
+        case 3:
+            while (submenu != 0){
+                System.out.println("Indique que gestión desea realizar (0 para volver): ");
+                System.out.println("  1 - Buscar ficha de reparación");
+                submenu = sc.nextInt();
+                
+                switch(submenu){
+                    case 0:
+                        break;
+                    case 1:
+                        Reparaciones.buscar();
                         break;
                     default:
                         System.out.println("Esa opción no es válida");
