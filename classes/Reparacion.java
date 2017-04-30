@@ -1,6 +1,9 @@
 package classes;
 import java.util.*;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 /**
  * Write a description of class Reparacion here.
  * 
@@ -9,10 +12,10 @@ import java.util.*;
  */
 public class Reparacion
 {
-    // instance variables - replace the example below with your own
     private Vehiculo vehiculo;
     private Mecanico mecanico;
     public int estado;
+    Date fecha;
     public Map<String, Integer> tareas = new HashMap<String, Integer>();
 
     /**
@@ -23,6 +26,17 @@ public class Reparacion
         this.vehiculo = vehiculo;
         this.mecanico = mecanico;
         this.estado = 0;
+         String DATE_FORMAT_NOW = "dd-MM-yyyy";
+         Date fecha = new Date();
+         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+         String stringDate = sdf.format(fecha);
+            try {
+                this.fecha = sdf.parse(stringDate);
+            } catch(ParseException e){
+             //Exception handling
+            } catch(Exception e){
+             //handle exception
+            }
     }
     
     public Vehiculo getVehiculo()
@@ -55,6 +69,24 @@ public class Reparacion
     }
     
     public void updateTarea(String titulo, int estado){
-        tareas.put(titulo, 0);
+        tareas.put(titulo, estado);
+    }
+    
+    public Date getFecha(){
+        return this.fecha;
+    }
+    
+    public void updateFecha(){
+         String DATE_FORMAT_NOW = "dd-MM-yyyy";
+         Date fecha = new Date();
+         SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+         String stringDate = sdf.format(fecha);
+        try {
+            this.fecha = sdf.parse(stringDate);
+        } catch(ParseException e){
+         //Exception handling
+        } catch(Exception e){
+         //handle exception
+        }
     }
 }

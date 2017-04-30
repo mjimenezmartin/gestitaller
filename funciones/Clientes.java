@@ -26,7 +26,8 @@ public class Clientes
     System.out.print("Introduzca DNI: ");
     String dni = sc.next();
     System.out.print("Introduzca nombre: ");
-    String nombre = sc.next();
+    sc.nextLine();
+    String nombre = sc.nextLine();
     System.out.print("Introduzca Tlfno: ");
     int tlfno = sc.nextInt();
     numeroCliente++;
@@ -57,7 +58,7 @@ public class Clientes
       }else{
           Cliente cliente = null;
           while (cliente == null){
-              System.out.print("Introduzca numero de cliente (introduzca 0 para volver al menu principal): ");
+              System.out.print("Introduzca DNI de cliente (introduzca 0 para volver al menu principal): ");
               String dni = sc.next();
               if (dni.equals("0")){
                  break;
@@ -66,13 +67,14 @@ public class Clientes
               if (cliente == null){
                 System.out.println("El numero de cliente introducido no existe");
               }else{
-                  System.out.print("Introduzca nuevo dni (dejar en blanco para mantener): ");
+                  System.out.print("Introduzca nuevo DNI: ");
                   dni = sc.next();
                   cliente.setDni(dni);
-                  System.out.print("Introduzca nuevo nombre (dejar en blanco para mantener): ");
+                  System.out.print("Introduzca nuevo nombre: ");
+                  sc.nextLine();
                   String nombre = sc.next();
                   cliente.setNombre(nombre);
-                  System.out.print("Introduzca nuevo teléfono (dejar en blanco para mantener): ");
+                  System.out.print("Introduzca nuevo teléfono: ");
                   int tlfno = sc.nextInt();
                   cliente.setTelefono(tlfno);
                   System.out.println("Cliente actualizado correctamente");
